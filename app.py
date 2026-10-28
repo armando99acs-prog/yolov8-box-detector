@@ -61,8 +61,10 @@ if video_file is not None:
             
             # Se calcula el tiempo de espera por fotograma ajustado por la ralentización
             frame_delay = (1.0 / fps) / speed_factor
-            
+
             # Contenedor para mostrar el progreso en Streamlit
+            st_frame = st.empty()
+            
             frame_count = 0
             while cap.isOpened():
                 while pause_video:
@@ -72,10 +74,10 @@ if video_file is not None:
                 if not ret:
                     break
                 
-                # Incrementamos el contador de fotogramas
+                # Para incrementar el contador de fotogramas
                 frame_count += 1
                 
-                # SALTO DE FOTOGRAMAS: Procesamos solo 1 de cada 2 frames para ganar velocidad
+                # Salto de fotogramas
                 if frame_count % 2 != 0:
                     continue
                 
@@ -90,4 +92,4 @@ if video_file is not None:
                 st_frame.image(annotated_frame, channels="RGB", use_container_width=True)
                 
             cap.release()
-            st.success("¡Proceso de inspección completado con éxito!")
+            st.success("Proceso de inspección completado")
