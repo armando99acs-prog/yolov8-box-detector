@@ -52,7 +52,7 @@ El proyecto se compone de los siguientes módulos principales:
   # YOLOv8 Box Detector
 Fine-tuning de YOLOv8m para detección y conteo en tiempo real de cajas de cartón con interfaz en Streamlit.
 
-<a href="yolov8-box-detector-2ugtyfyqqq2zumdm2aechc.streamlit.app" target="_blank">
+<a href="https://yolov8-box-detector-2ugtyfyqqq2zumdm2aechc.streamlit.app" target="_blank">
   <img src="https://static.streamlit.io/badges/streamlit_badge_black_white.svg" alt="Streamlit App">
 </a>
 
