@@ -56,3 +56,4 @@ Fine-tuning de YOLOv8m para detección y conteo en tiempo real de cajas de cart�
   <img src="https://static.streamlit.io/badges/streamlit_badge_black_white.svg" alt="Streamlit App" style="max-width: 100%;">
 </a>
 
+📥 [Descargar video de prueba (1.5 MB)](https://raw.githubusercontent.com/armando99acs-prog/yolov8-box-detector/main/video_prueba.mp4) para probar la app.
