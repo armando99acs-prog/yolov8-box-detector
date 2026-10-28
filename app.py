@@ -63,10 +63,8 @@ if video_file is not None:
             frame_delay = (1.0 / fps) / speed_factor
             
             # Contenedor para mostrar el progreso en Streamlit
-            st_frame = st.empty()
-            
+            frame_count = 0
             while cap.isOpened():
-                # La pausa aborta el video
                 while pause_video:
                     time.sleep(0.1)
                 
@@ -74,10 +72,15 @@ if video_file is not None:
                 if not ret:
                     break
                 
-                # Se analiza el video cada frame
+                # Incrementamos el contador de fotogramas
+                frame_count += 1
+                
+                # SALTO DE FOTOGRAMAS: Procesamos solo 1 de cada 2 frames para ganar velocidad
+                if frame_count % 2 != 0:
+                    continue
+                
+                # Se analiza el fotograma seleccionado
                 results = model(frame, conf=conf_threshold)
-
-                # Señala cada caja dentro de un cuadro
                 annotated_frame = results[0].plot()
                 
                 # Se convierte el color de BGR (OpenCV) a RGB (Streamlit)
@@ -85,9 +88,6 @@ if video_file is not None:
                 
                 # Se muestra el fotograma procesado en la web
                 st_frame.image(annotated_frame, channels="RGB", use_container_width=True)
-                
-                # Control de velocidad del video
-                time.sleep(frame_delay)
                 
             cap.release()
             st.success("¡Proceso de inspección completado con éxito!")
