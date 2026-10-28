@@ -46,3 +46,6 @@ El proyecto se compone de los siguientes módulos principales:
   - Configura la página web y su barra lateral de controles.
   - Carga el modelo con caché de recursos de Streamlit.
   - Almacena temporalmente el video subido para procesarlo fotograma a fotograma y renderizarlo en tiempo real en la interfaz gráfica.
+ 
+  - <img width="1893" height="945" alt="Captura de pantalla 2026-10-27 183324" src="https://github.com/user-attachments/assets/62caab44-bc47-4951-b6bb-ec3bdd85eac5" />
+
