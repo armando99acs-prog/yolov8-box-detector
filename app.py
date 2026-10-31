@@ -34,7 +34,7 @@ pause_video = st.sidebar.checkbox("Abortar reproducción")
 # Se carga el modelo
 @st.cache_resource
 def load_model():
-    model_path = os.path.join(BASE_DIR, "mis_resultados", "pallet_boxes_exp-4", "weights", "best.pt")
+    model_path = os.path.join(BASE_DIR, "mis_resultados", "yolov8x-5", "weights", "best.pt")
     return YOLO(model_path)
 
 model = load_model()

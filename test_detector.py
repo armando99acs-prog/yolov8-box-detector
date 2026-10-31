@@ -6,7 +6,7 @@ import os
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 # Se carga el modelo
-model_path = os.path.join(BASE_DIR, "mis_resultados", "pallet_boxes_exp-4", "weights", "best.pt")
+model_path = os.path.join(BASE_DIR, "mis_resultados", "Yolov8m", "weights", "best.pt")
 model = YOLO(model_path)
 
 # Se abre el video (0 para webcam)

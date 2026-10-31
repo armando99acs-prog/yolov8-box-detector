@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 2
+names: ['Box', 'pallet']
+
+roboflow:
+  workspace: safety-poc
+  project: boxes-zm4gj
+  version: 1
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/safety-poc/boxes-zm4gj/dataset/1
