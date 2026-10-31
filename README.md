@@ -22,15 +22,6 @@ El proyecto se compone de los siguientes módulos principales:
 * **Librerías:** `ultralytics` (YOLO), `os`.
 * **Ejecución:** Carga el modelo, el archivo de configuración del dataset (`data.yaml`) y ejecuta el entrenamiento mediante el método `.train()`.
 
-### 2. `test_detector.py` (Pruebas de Detección)
-* **¿Qué hace?:** Pone a prueba el modelo entrenado con videos de prueba o la cámara en tiempo real (`0`), filtrando detecciones con un umbral de confianza mínimo.
-* **Librerías:** `ultralytics`, `OpenCV (cv2)`, `os`.
-* **Ejecución:** 
-  - Carga los pesos del modelo (`YOLO()`).
-  - Abre la fuente de video (`cv2.VideoCapture()`).
-  - Analiza cada fotograma con un umbral de confianza y dibuja las cajas detectadas (`results[0].plot()`).
-  - Muestra el resultado en una ventana interactiva (`cv2.imshow()`).
-
 ### 3. `test_contador.py` (Contador en Tiempo Real)
 * **¿Qué hace?:** Extiende el script anterior añadiendo un contador dinámico que calcula la cantidad exacta de cajas presentes en cada fotograma del video.
 * **Librerías:** `ultralytics`, `OpenCV (cv2)`, `os`.
