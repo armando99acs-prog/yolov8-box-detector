@@ -46,10 +46,10 @@ El proyecto se compone de los siguientes módulos principales:
   - Lee el video fotograma a fotograma y obtiene la tasa de cuadros por segundo (`FPS`) real.
   - Aplica un filtro de muestreo temporal para almacenar una imagen exactamente cada medio segundo (`fps // 2`), evitando redundancias innecesarias y optimizando el proceso de etiquetado
  
-### 6. `Demostración` de la app
+### 6. `Demostración del modelo` (GIF demostrativo)
 ![Demostración de la App](demo.gif)
 
-### 7. `Prueba la app` (en server puede tardar al ser gratuito)
+### 7. `Prueba la app` (en server Streamlit puede tardar al ser gratuito)
 Fine-tuning de YOLOv8m para detección y conteo en tiempo real de cajas de cartón con interfaz en Streamlit.
 
 <a href="https://yolov8-box-detector-2ugtyfyqqq2zumdm2aechc.streamlit.app" target="_blank" rel="noopener noreferrer">
