@@ -34,7 +34,7 @@ pause_video = st.sidebar.checkbox("Abortar reproducción")
 # Se carga el modelo
 @st.cache_resource
 def load_model():
-    model_path = os.path.join(BASE_DIR, "mis_resultados", "Yolov8m", "weights", "best.pt")
+    model_path = os.path.join(BASE_DIR, "mis_resultados", "yolov8m", "weights", "best.pt")
     return YOLO(model_path)
 
 model = load_model()
@@ -90,6 +90,11 @@ if video_file is not None:
                 
                 # Se muestra el fotograma procesado en la web
                 st_frame.image(annotated_frame, channels="RGB", use_container_width=True)
+
+                # Controla la velocidad de video
+                time.sleep(frame_delay)
                 
             cap.release()
             st.success("Proceso de inspección completado")
+
+            # python -m streamlit run app.py
