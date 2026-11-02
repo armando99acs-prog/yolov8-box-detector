@@ -38,7 +38,7 @@ El proyecto se compone de los siguientes módulos principales:
   - Carga el modelo con caché de recursos de Streamlit.
   - Almacena temporalmente el video subido para procesarlo fotograma a fotograma y renderizarlo en tiempo real en la interfaz gráfica.
  
-  - <img width="1893" height="945" alt="Captura de pantalla 2026-10-27 183324" src="https://github.com/user-attachments/assets/62caab44-bc47-4951-b6bb-ec3bdd85eac5" />
+  - <video src="demo.mp4" autoplay loop muted playsinline width="100%"></video>
 
   # YOLOv8 Box Detector
 Fine-tuning de YOLOv8m para detección y conteo en tiempo real de cajas de cartón con interfaz en Streamlit.
