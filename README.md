@@ -38,10 +38,18 @@ El proyecto se compone de los siguientes módulos principales:
   - Carga el modelo con caché de recursos de Streamlit.
   - Almacena temporalmente el video subido para procesarlo fotograma a fotograma y renderizarlo en tiempo real en la interfaz gráfica.
  
-### 5. `Prueba` de la app
+### 5. `extraer_frame.py` (Automatización de Dataset)
+* **¿Qué hace?:** Automatiza la recolección de datos extrayendo fotogramas clave de los videos de prueba para enriquecer el dataset de entrenamiento y mejorar la precisión del modelo en escenarios reales.
+* **Librerías:** `cv2` (OpenCV), `os`.
+* **Ejecución:**
+  - Define la ruta del video de origen y crea de manera automática el directorio de salida (`frames_extraidos`) si no existe.
+  - Lee el video fotograma a fotograma y obtiene la tasa de cuadros por segundo (`FPS`) real.
+  - Aplica un filtro de muestreo temporal para almacenar una imagen exactamente cada medio segundo (`fps // 2`), evitando redundancias innecesarias y optimizando el proceso de etiquetado
+ 
+### 6. `Prueba` de la app
 ![Demostración de la App](demo.gif)
 
-### 4. `Demostración` de la app (en server puede tardar al ser gratuito)
+### 7. `Demostración` de la app (en server puede tardar al ser gratuito)
 Fine-tuning de YOLOv8m para detección y conteo en tiempo real de cajas de cartón con interfaz en Streamlit.
 
 <a href="https://yolov8-box-detector-2ugtyfyqqq2zumdm2aechc.streamlit.app" target="_blank" rel="noopener noreferrer">
